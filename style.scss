@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,600&family=Josefin+Sans:wght@200;300;400;500;600;700&family=Montserrat+Alternates:ital,wght@1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,600&family=Josefin+Sans:wght@200;300;400;500;600;700&family=Montserrat+Alternates:ital,wght@1,400;1,500;1,600;1,700;1,800&display=swap");
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+//
+body {
+  background: linear-gradient(180deg, #000, #71008d);
+  background-image: url(https://images.unsplash.com/photo-1543258103-a62bdc069871?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.year {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 150px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: #d2a483 0px 0px 5px, #e5c38e 0px 0px 10px, #e5c38e 0px 0px 15px,
+    #dead7e 0px 0px 20px, #e5c38e 0px 0px 30px, #e5c38e 0px 0px 40px,
+    #e5c38e 0px 0px 50px, #e5c38e 0px 0px 75px;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 45px;
+  text-shadow: 0 0 1px #dd8828, 0 0 5px #dd8828, 0 0 10px #dd8828,
+    0 0 12px #dd8828;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.countdown * {
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+  text-shadow: 0 0 1px #014901, 0 0 5px #014901, 0 0 10px #014901,
+    0 0 12px #014901;
+}
+.countdown {
+  max-width: 270px;
+  min-width: 250px;
+  justify-content: space-between;
+}
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.progress {
+  position: relative;
+  width: 100.8px;
+  height: 100.8px;
+  border-radius: 50%;
+  border: 7px solid #ffffff;
+  box-sizing: content-box;
+  box-shadow: 0 0 60px white;
+}
+
+.progress:before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 59.8px;
+  top: 14.1px;
+  left: 66.9px;
+  background: #ffffff;
+  border-radius: 3.5px;
+  transform-origin: 3.5px 58.1px;
+  animation: progress-t59zy9 1.2s linear infinite;
+}
+
+.progress:after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 38.7px;
+  top: 35.2px;
+  left: 66.9px;
+  background: #ffffff;
+  border-radius: 3.5px;
+  transform-origin: 3.5px 37px;
+  animation: progress-t59zy9 7.199999999999999s linear infinite;
+}
+
+@keyframes progress-t59zy9 {
+  0% {
+    tranform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 425px) {
+  .title {
+    font-size: 34px;
+  }
+  .year {
+    font-size: 130px;
+  }
+  .countdown {
+    width: 200px;
+  }
+  .countdown * {
+    font-size: 25px;
+  }
+}
